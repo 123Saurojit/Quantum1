@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Quantum X Shield - Contact Us</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <style type="text/css">
+      body {
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+font-family: "proxima-nova-soft", sans-serif;
+-webkit-user-select: none;
+
+}
+body .vertical-centered-box {
+position: absolute;
+width: 100%;
+height: 100%;
+text-align: center;
+}
+body .vertical-centered-box:after {
+content: '';
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+margin-right: -0.25em;
+}
+body .vertical-centered-box .content {
+box-sizing: border-box;
+display: inline-block;
+vertical-align: middle;
+text-align: left;
+font-size: 0;
+}
+* {
+transition: all 0.3s;
+}
+body {
+background: #2c2d44;
+}
+.loader-circle {
+position: absolute;
+left: 50%;
+top: 50%;
+width: 120px;
+height: 120px;
+border-radius: 50%;
+box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+margin-left: -60px;
+margin-top: -60px;
+}
+.loader-line-mask {
+position: absolute;
+left: 50%;
+top: 50%;
+width: 60px;
+height: 120px;
+margin-left: -60px;
+margin-top: -60px;
+overflow: hidden;
+transform-origin: 60px 60px;
+-webkit-mask-image: -webkit-linear-gradient(top, #000000, rgba(0, 0, 0, 0));
+animation: rotate 1.2s infinite linear;
+}
+.loader-line-mask .loader-line {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+#particles-background,
+#particles-foreground {
+left: -51%;
+top: -51%;
+width: 202%;
+height: 202%;
+transform: scale3d(0.5, 0.5, 1);
+}
+#particles-background {
+background: #111111;
+}
+@keyframes rotate {
+0% {
+transform: rotate(0deg);
+}
+100% {
+transform: rotate(360deg);
+}
+}
+@keyframes fade {
+0% {
+opacity: 1;
+}
+50% {
+opacity: 0.25;
+}
+}
+@keyframes fade-in {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+    canvas {
+      display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+</style>
+</head>
+<body class="bg-cover sm:bg-cover overflow-x-hidden opacity-90 bg-[#111111]" style="background-image: url('./images/gridlines.png');">
+
+  <div id="MainLoader" style="opacity: 1;">
+    <div id="particles-background" class="vertical-centered-box"></div>
+  <div id="particles-foreground" class="vertical-centered-box"></div>
+  
+  <div class="vertical-centered-box">
+    <div class="content">
+      <div class="loader-circle"></div>
+      <div class="loader-line-mask">
+        <div class="loader-line"></div>
+      </div>
+      <svg width="36px" height="24px" viewBox="0 0 36 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path d="M8.98885921,23.8523026 C8.8942483,23.9435442 8.76801031,24 8.62933774,24 L2.03198365,24 C1.73814918,24 1.5,23.7482301 1.5,23.4380086 C1.5,23.2831829 1.55946972,23.1428989 1.65570253,23.0416777 L13.2166154,12.4291351 C13.3325814,12.3262031 13.4061076,12.1719477 13.4061076,11.999444 C13.4061076,11.8363496 13.3401502,11.6897927 13.2352673,11.587431 L1.68841087,0.990000249 C1.57298556,0.88706828 1.5,0.733668282 1.5,0.561734827 C1.5,0.251798399 1.73814918,2.85130108e-05 2.03198365,2.85130108e-05 L8.62933774,2.85130108e-05 C8.76855094,2.85130108e-05 8.89532956,0.0561991444 8.98994048,0.148296169 L21.4358709,11.5757407 C21.548593,11.6783875 21.6196864,11.8297916 21.6196864,11.999444 C21.6196864,12.1693815 21.5483227,12.3219261 21.4350599,12.4251432 L8.98885921,23.8523026 Z M26.5774333,23.8384453 L20.1765996,17.9616286 C20.060093,17.8578413 19.9865669,17.703871 19.9865669,17.5310822 C19.9865669,17.3859509 20.0390083,17.2536506 20.1246988,17.153855 L23.4190508,14.1291948 C23.5163648,14.0165684 23.6569296,13.945571 23.8131728,13.945571 C23.9602252,13.945571 24.0929508,14.0082997 24.1894539,14.1092357 L33.861933,22.9913237 C33.9892522,23.0939706 34.0714286,23.2559245 34.0714286,23.4381226 C34.0714286,23.748059 33.8332794,23.9998289 33.5394449,23.9998289 L26.9504707,23.9998289 C26.8053105,23.9998289 26.6733958,23.9382408 26.5774333,23.8384453 Z M26.5774333,0.161098511 C26.6733958,0.0615881034 26.8053105,0 26.9504707,0 L33.5394449,0 C33.8332794,0 34.0714286,0.251769886 34.0714286,0.561706314 C34.0714286,0.743904453 33.9892522,0.905573224 33.861933,1.00822006 L24.1894539,9.89030807 C24.0929508,9.99152926 23.9602252,10.0542579 23.8131728,10.0542579 C23.6569296,10.0542579 23.5163648,9.98354562 23.4190508,9.87063409 L20.1246988,6.8459739 C20.0390083,6.74617837 19.9865669,6.613878 19.9865669,6.46874677 C19.9865669,6.29624305 20.060093,6.14198767 20.1765996,6.03848544 L26.5774333,0.161098511 Z" fill="#FFFFFF"></path>
+      </svg>
+    </div>
+  </div>
+  </div>
+
+  <div id="main-contact" style="opacity: 0;">
+  
+  <canvas class="js--canvas md:flex"></canvas>
+
+  <nav class=" animate__animated animate__fadeInUp animate__slower sticky z-50">
+    <div class="container mx-1 md:mx-10 flex items-center bg-[#111111] h-20 w-full">
+      <a href="index.html" class="flex items-center text-white">
+        <img src="./images/QXA LOGO.png" alt="Your Logo" class="w-full 2xl:w-52 h-8 mr-2 mt-3">
+      </a>
+      <ul class="hidden md:flex gap-16 md:ml-72">
+        <a href="index.html" class="text-white hover:font-bold transition">Home</a>
+        <a href="hfm.html" class="text-white hover:font-bold transition">Hall of Fame</a>
+        <a href="articles.html" class="text-white hover:font-bold transition">Articles</a>
+        <a href="contactUs.html" class="text-white hover:font-bold transition">Contact Us</a>
+      </ul>
+      
+      
+      <div class="flex gap-2 ml-auto md:hidden mt-3">
+        <a href="https://youtube.com/@QuantumXshield?si=xzSFuHWvwgv167K2"><img src="./images/youtube (4) 1.png" alt="LinkedIn" width="28" height="30" class=""></a>
+        <a href="https://www.linkedin.com/company/quantum-x-shield/"><img src="./images/linkedin (2).png" alt="LinkedIn" width="25"></a>
+        <a href="https://www.instagram.com/quantum_x_shield/"><img src="./images/instagram (4).png" alt="Instagram" width="25"></a>
+        <a href="https://twitter.com/QuantumXShield"><img src="./images/twitter.png" alt="Twitter" width="25"></a>
+      </div>
+  </nav>
+
+  
+<section class="">
+  <div class="text-center mt-20 animate__animated animate__fadeInUp animate__slower">
+    <div class="relative inline-block text-left mx-4">
+        <div>
+            <button onclick="toggleDropdown('dropdownOptions1')" type="button"
+                    class="inline-flex justify-center px-4 md:px-36 py-2 text-sm font-medium text-white bg-black border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                EDUCATIONAL SERVICES
+            </button>
+        </div>
+
+      
+        <div id="dropdownOptions1" class="hidden origin-top-right absolute left-1/2 transform -translate-x-1/2 mt-2 w-[400px] rounded-md shadow-lg bg-black ring-1xt-white ring-black ring-opacity-5 z-50">
+            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• ETHICAL HACKING</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• BUG BOUNTY HUNTING V1.0</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• ADVANCE BUG BOUNTY HUNTING V2.0</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• WAPT (WEB APPLICATION PENETRATION TESTING)</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• ANDROID PENETRATION TESTING</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• IOS PENETRATION TESTING</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• API PENETRATION TESTING</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• SECURE CODE REVIEW</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• RED TEAMING (ALL-IN-ONE)</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• NETWORK PENETRATION TESTING FOR BEGINNERS</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• NETWORK PENETRATION TESTING FOR ADVANCE</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• PRACTICAL WIFI HACKING (ALL-IN-ONE)</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• CLOUD SECURITY</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• BASIC OF FORENSICS (ALL-IN-ONE)</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• COMPUTER FORENSICS (ALL-IN-ONE)</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• ETWORK FORENSICS (ALL-IN-ONE)</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• THICK-CLIENT PENETRATION TESTING</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="relative inline-block text-left mx-4">
+        <div>
+            <button onclick="toggleDropdown('dropdownOptions2')" type="button"
+                    class="inline-flex justify-center px-5 mt-20 md:px-36 py-2 text-sm font-medium text-white bg-black border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                CORPORATE SERVICES
+            </button>
+        </div>
+
+
+        
+        <div id="dropdownOptions2" class="hidden origin-top-right absolute left-1/2 transform -translate-x-1/2 mt-2 w-[400px] rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5">
+            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• CYBERSECURITY AWARNESS PROGRAMS</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• CORPORATE TECHNICAL TRAINING</a>
+                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• SECURITY CONSULTING SERVICES</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• IDENTITY AND ACCESS MANAGEMENT (IAM) SERVICES</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• SECURITY AUDITING AND COMPLIANCE SERVICES</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• SECURITY INFORMATION AND EVENT MANAGEMENT (SIEM) SERVICES</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• WEBSITE/ WEB APPLICATION SECURITY SERVICES</a>
+                          <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• NETWORK/ INFRASTRUCTURE SECURITY SERVICES</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• CLOUD SECURITY SERVICES</a>
+                              <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900" role="menuitem">• SECURE CODE REVIEW SERVICES</a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="flex justify-center items-center mt-24 md:mt-28">
+  <div class="text-center">
+    <div class="md:mt-20 mt-10">
+      <h2 class="text-[#1770B5]">Address</h2>
+      <p class="text-white">Pune, Maharashtra</p>
+    </div>
+    <div class=" mt-10">
+      <h1 class="text-[#1770B5]"></h1>
+      <a href="https://www.instagram.com/quantum_x_shield" class="text-white md:p-3">QUANTUM-X-SHIELD</a>
+      <p class="text-white">+91 7776869608</p>
+    </div>
+    <div class="md:mt-14 mt-8">
+      <a href="articles.html" class="text-white bg-blue-500 p-2 rounded-full">Contact us</a>
+    </div>
+  </div>
+</section>
+
+     
+
+      <section class="hidden md:flex md:mt-28">
+        <div class="border-t bg-black items-center md:w-[700px] mt-2 sm:w-[600px] md:ml-20 hidden"></div>
+  
+        <div class="flex flex-col md:flex-row md:ml-10">
+          <div class="mt-20 flex gap-5 text-[12px] ml-10">
+            <img src="./images/DSGFHG.png" alt="">
+            <p class="text-white">ADDRESS: PUNE, MAHARASHTRA</p>
+          </div>
+          <div class="mt-20 flex gap-5 text-[12px] ml-10">
+            <img src="./images/DSGFHG.png" alt="">
+            <p class="text-white">CONTACT: +91 7776869608</p>
+          </div>
+          <div class="mt-20 flex gap-5 text-[12px] ml-10">
+            <img src="./images/DSGFHG.png" alt="">
+            <p class="text-white">support@quantumxshield.com</p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="mt-10">
+        <div class="hidden md:flex">
+          <div class="">
+            <div class="flex mt-4">
+              <img src="./images/DSGFHG.png" alt="" class="opacity-25 ml-20">
+              <p class="text-white ml-7">HOME</p>
+            </div>
+            <div class="flex mt-4">
+              <img src="./images/DSGFHG.png" alt="" class="opacity-25 ml-20">
+              <p class="text-white ml-7">ARTICLES</p>
+            </div>
+            <div class="flex mt-4">
+              <img src="./images/DSGFHG.png" alt="" class="opacity-25 ml-20">
+              <p class="text-white ml-7">CONTACT US</p>
+            </div>
+          </div>
+  
+         <div class="flex mt-5 gap-5 ml-auto mr-28">
+          <a href="https://youtube.com/@QuantumXshield?si=xzSFuHWvwgv167K2"><img src="./images/youtube (4) 1.png" alt="LinkedIn" width="28" height="30" class=""></a>
+          <a href="https://www.linkedin.com/company/quantum-x-shield/"><img src="./images/linkedin (2).png" alt="LinkedIn" width="25"></a>
+            <a href="https://www.instagram.com/quantum_x_shield/"><img src="./images/instagram (4).png" alt="Instagram" width="25"></a>
+            <a href="https://twitter.com/QuantumXShield"><img src="./images/twitter.png" alt="Twitter" width="25"></a>
+         </div>
+        </div>
+  
+  
+        <div class="text-center mt-24">
+          <p class="text-white text-[10px]">©2023 DESIGNED AND DEVELOPED BY <a href="https://stackblocks.in/" class="font-bold">STACKBLOCKS</a></p>
+        </div>
+      </section> 
+      <div class="fixed bottom-4 left-0 right-0 flex justify-center items-center">
+        <div class="flex bg-[#4E4E4E] rounded-full p-4 w-64 md:hidden">
+          <a href="index.html" class="text-white w-full"><img src="./images/Vector.png" width="22" class="ml-2 opacity-40"></a>
+          <a href="hfm.html" class="text-white w-full"><img src="./images/trophy.png" width="23" class="ml-4 opacity-40"></a>
+          <a href="articles.html" class="text-white w-full"><img src="./images/Vector (1).png" width="22" class="ml-7 opacity-40"></a>
+          <a href="contactUs.html" class="text-white w-full"><img src="./images/form (1).png" width="23" class="ml-7 opacity-100"></a> 
+        </div>
+        </div>
+    </div>
+  </div>
+    <script type="text/javascript">
+      var loader = document.getElementById("MainLoader");
+    var mainBox = document.getElementById("main-contact");
+    
+    window.addEventListener('load', function() {
+        
+        setTimeout(function() {
+            loader.style.opacity = 0;
+            mainBox.style.opacity = 1;
+        }, 1000);
+    });
+
+    window.onscroll = function() {
+    myFunction();
+  };
+
+  var navbar = document.querySelector("nav");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("fixed", "top-0", "animate__animated", "animate__fadeInUp", "animate__slower");
+    } else {
+      navbar.classList.remove("fixed", "top-0", "animate__animated", "animate__fadeInUp", "animate__slower");
+    }
+  }
+
+    function toggleDropdown(dropdownId) {
+        var dropdownContent = document.getElementById(dropdownId);
+        dropdownContent.classList.toggle("hidden");
+    }
+    const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', (e) => {
+  const x = e.clientX - cursor.clientWidth / 2;
+  const y = e.clientY - cursor.clientHeight / 2;
+
+  cursor.style.transform = `translate(${x}px, ${y}px) scale(1.5)`;
+});
+
+document.addEventListener('mouseleave', () => {
+  cursor.style.transform = 'scale(1)';
+});
+function funMouse() {
+  
+  
+  
+  
+  // get canvas
+  const canvas = document.querySelector(".js--canvas");
+  const canvasContext = canvas.getContext("2d");
+
+  
+  
+  
+  // set canvas size
+  let canvasWidth = (canvas.width = window.innerWidth);
+  let canvasHeight = (canvas.height = window.innerHeight);
+
+  
+  
+  
+  // get mouse position
+  let mouseX = canvasWidth / 2;
+  let mouseY = canvasHeight / 2;
+
+  
+  
+  
+  // create circles
+  let circle = {
+    radius: 12,
+    lastX: mouseX,
+    lastY: mouseY
+  };
+
+  let miniCircle = {
+    radius: 3,
+    lastX: mouseX,
+    lastY: mouseY
+  };
+
+  
+  
+  
+  // get all data-hover elements
+  // obvi this is better one a web page with more than one anchor tag
+  const elements = [...document.querySelectorAll("a")];
+
+  
+  
+  
+  // resize canvas function
+  var resizeCanvas = function resizeCanvas() {
+    canvasWidth = canvas.width = window.innerWidth;
+    canvasHeight = canvas.height = window.innerHeight;
+  };
+
+  
+  
+  
+  // create var holding mouseRender function
+  var mouseRender = function mouseRender() {
+    
+    
+    // clear canvas so no colours or styles overlap
+    canvasContext.clearRect(0, 0, canvasWidth, canvasHeight);
+
+    
+    // get circles x-coordinate and y-coordinate based on mouse coordinates
+    // the small circle has a slight delay due to the last parms passed
+    circle.lastX = lerp(circle.lastX, mouseX, 0.5);
+    circle.lastY = lerp(circle.lastY, mouseY, 0.5);
+    
+    miniCircle.lastX = lerp(miniCircle.lastX, mouseX, 0.1);
+    miniCircle.lastY = lerp(miniCircle.lastY, mouseY, 0.1);
+
+    
+    // create first circle
+    canvasContext.beginPath();
+    canvasContext.arc(
+      circle.lastX,
+      circle.lastY,
+      circle.radius,
+      0,
+      Math.PI * 2,
+      false
+    );
+    canvasContext.lineWidth = 2;
+    canvasContext.strokeStyle = "white";
+    canvasContext.stroke();
+    canvasContext.closePath();
+
+    
+    // create small/second circle
+    canvasContext.beginPath();
+    canvasContext.arc(
+      miniCircle.lastX,
+      miniCircle.lastY,
+      miniCircle.radius,
+      0,
+      Math.PI * 2,
+      false
+    );
+    canvasContext.fillStyle = "white";
+    canvasContext.fill();
+    canvasContext.closePath();
+
+    
+    // render/draw mouse by calling requestAnimationFrame() and passing itself through
+    requestAnimationFrame(mouseRender);
+  };
+
+  
+  
+  
+  // mouseInit function
+  var mouseInit = function mouseInit() {
+    
+    
+    // render/draw mouse by calling requestAnimationFrame() and passing mouseRender
+    requestAnimationFrame(mouseRender);
+
+    
+    // on mouse move update coordinates
+    window.addEventListener("mousemove", function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    
+    // update canvas size on window resize
+    window.addEventListener("resize", resizeCanvas, false);
+
+    
+    // style mouse on hover function
+    function on() {
+      canvasContext.clearRect(0, 0, canvasWidth, canvasHeight);
+      canvasContext.beginPath();
+      canvasContext.arc(
+        circle.lastX,
+        circle.lastY,
+        circle.radius,
+        0,
+        Math.PI * 2,
+        false
+      );
+      canvasContext.lineWidth = 3;
+      canvasContext.strokeStyle = "#7BE524";
+      canvasContext.stroke();
+      canvasContext.closePath();
+
+      requestAnimationFrame(on);
+    }
+
+    
+    // style mouse off hover
+    // should be the same are prior to any hover
+    // i noticed if i don't do this then the on styles will stay even after hover
+    function off() {
+      canvasContext.clearRect(0, 0, canvasWidth, canvasHeight);
+      canvasContext.beginPath();
+      canvasContext.arc(
+        circle.lastX,
+        circle.lastY,
+        circle.radius,
+        0,
+        Math.PI * 2,
+        false
+      );
+      canvasContext.lineWidth = 2;
+      canvasContext.strokeStyle = "white";
+      canvasContext.stroke();
+      canvasContext.closePath();
+
+      canvasContext.beginPath();
+      canvasContext.arc(
+        miniCircle.lastX,
+        miniCircle.lastY,
+        miniCircle.radius,
+        0,
+        Math.PI * 2,
+        false
+      );
+      canvasContext.fillStyle = "white";
+      canvasContext.fill();
+      canvasContext.closePath();
+
+      requestAnimationFrame(off);
+    }
+
+    
+    // using TweenMax.min.js by GSAP addin easing for radius for circle
+    // https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js
+    let tween = TweenMax.to(circle, 0.25, {
+      radius: circle.radius * 2.5,
+      ease: Power1.easeInOut,
+      paused: true
+    });
+
+    
+    // for each hover element add mouseenter and mouseleave actions
+    elements.forEach((el) => {
+      el.addEventListener( "mouseenter", () => { on(); }, false );
+      el.addEventListener( "mouseleave", () => { off(); }, false );
+      el.addEventListener( "mouseenter", () => { tween.play(); }, false );
+      el.addEventListener( "mouseleave", () => { tween.reverse(); }, false );
+    });
+  };
+
+  
+  // tbh this is from ReGGae's pen that is added in the html comment at the top
+  // from my understanding it does a bunch of math to figure out a smooth position update, including the delay on the mini circle
+  // my [very poor] translation of this math:
+  // shape.lastX = lerp(shape.lastX, mouseX, delay);
+  // above === below
+  // return (1 - delay) * shape.lastX + delay * mouseX;
+  var lerp = function lerp(a, b, n) {
+    return (1 - n) * a + n * b;
+  };
+
+  
+  //init the mouse function
+  mouseInit();
+}
+
+
+// run fun mouse to have this cursor
+funMouse();
+
+        </script>
+        <script type="text/javascript" src="./loader.js"></script>
+</body>
+</html>
